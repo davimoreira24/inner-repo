@@ -3,236 +3,154 @@ import ResumeDownload from './ResumeDownload';
 
 export interface ExperienceProps {}
 
-const Experience: React.FC<ExperienceProps> = (props) => {
+const Experience: React.FC<ExperienceProps> = () => {
     return (
         <div className="site-page-content">
             <ResumeDownload />
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>Hover</h1>
+                        <h1>Magazine Luiza</h1>
                         <a
                             rel="noreferrer"
                             target="_blank"
-                            href={'https://hover.gg/'}
+                            href="https://www.magazineluiza.com.br/"
                         >
-                            <h4>www.hover.gg</h4>
+                            <h4>magazineluiza.com.br</h4>
                         </a>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Frontend Engineer</h3>
+                        <h3>Senior Developer</h3>
                         <b>
-                            <p>Summer 2020 - Fall 2021</p>
+                            <p>2025 – Present</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    Targeted towards online content creators and streamers
-                    looking to build a brand, Hover is the home of over 150K
-                    users. Written in Typescript using React, React-Native,
-                    Framer, Express, and Redux.
+                    Building high-impact experiences for both web and mobile at
+                    one of Brazil&apos;s largest retailers. I focus on scalable,
+                    maintainable software that translates into real business
+                    outcomes.
                 </p>
                 <br />
                 <ul>
                     <li>
                         <p>
-                            Architected and engineered the vertical scrolling
-                            discover player which, at its daily peak, was
-                            responsible for generating over 600,000 views across
-                            20,000 active users.
+                            Member of the team that delivered a custom CRM for
+                            creating dynamic pages—pairing performance with
+                            flexibility for internal and customer-facing flows.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Designed and implemented multiple features to
-                            increase app usability and user experience while
-                            ensuring the quality, maintainability and
-                            scalability of the front end as the user base grew
-                            by over 50,000.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Coordinated major refactors targeted towards app
-                            optimization and performance resulting in a smoother
-                            user experience and accomplished by eliminating
-                            redundant re-renders and API calls by over 50%.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Directed and executed an internal migration of 3
-                            individual repositories to a single monorepo,
-                            greatly reducing overhead for developing new
-                            features, fixing bugs, and managing dependencies.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Rebuilt the website with React and shared mobile app
-                            components allowing users to access a wide variety
-                            of app interactions entirely on the web, resulting
-                            in over 700,000 total site visits.
+                            Own features across the stack with emphasis on code
+                            quality, architecture clarity, and measurable impact
+                            on conversion and operations.
                         </p>
                     </li>
                 </ul>
             </div>
+
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>BrACS</h1>
+                        <h1>RD Saúde</h1>
                         <a
-                            target="_blank"
                             rel="noreferrer"
-                            href={'https://bracs.co/'}
+                            target="_blank"
+                            href="https://www.rdsaude.com.br/"
                         >
-                            <h4>www.bracs.co</h4>
+                            <h4>rdsaude.com.br</h4>
                         </a>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Team Lead & Engineer</h3>
+                        <h3>Technical Owner — Complex Solutions</h3>
                         <b>
-                            <p>Fall 2021 - Spring 2022</p>
+                            <p>2024</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    Supervised and developed the front end of bracs.co, a
-                    beautifully simple and effective bracket creation and
-                    management engine. Written in Typescript using React and
-                    deployed using AWS Elastic Beanstalk.
+                    RD Saúde is Latin America&apos;s largest drugstore retailer.
+                    I joined to own technically demanding initiatives where
+                    architecture decisions, collaboration, and quality gates
+                    directly affect millions of customers.
                 </p>
                 <br />
                 <ul>
                     <li>
                         <p>
-                            Managed the project and team members by conducting
-                            bi-weekly stand-ups.
+                            Led design and delivery of complex solutions—from
+                            high-level architecture to hands-on implementation.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Architected bracket view UI using React Flow and
-                            custom bracket data types built from binary trees.
+                            Ran coding dojos and deep code reviews to raise the
+                            bar on engineering practices and shared ownership.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Created conversion algorithms to serialize bracket
-                            tree data to allow for saving in the cloud.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Implemented bracket generation utilities which
-                            employ gray code for proper team seeding and
-                            placement.
+                            Partnered with product and leadership on technical
+                            trade-offs, prioritizing reliability and maintainability
+                            at scale.
                         </p>
                     </li>
                 </ul>
             </div>
+
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>K-F/X</h1>
+                        <h1>Deway</h1>
                         <a
-                            target="_blank"
                             rel="noreferrer"
-                            href={'https://kfxnyc.com/'}
+                            target="_blank"
+                            href="https://deway.com.br/"
                         >
-                            <h4>www.kfxnyc.com</h4>
+                            <h4>deway.com.br</h4>
                         </a>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Special Effects Technician</h3>
+                        <h3>Intern → Tech Lead</h3>
                         <b>
-                            <p>Fall 2019, Summer 2021</p>
+                            <p>2018 – 2024</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    Applied problem solving and technical skills to operate
-                    large equipment such as rain machines, fog machines, small
-                    explosives and general rigging with a professional crew of
-                    50+ people.
+                    I started in Fortaleza as an intern at a mobile-focused
+                    startup. What began with Ionic and React Native turned into
+                    six years of growth—ending as Tech Lead—shipping products from
+                    zero to production alongside a growing team.
                 </p>
                 <br />
-                <h3 style={styles.indent}>Screen Credits:</h3>
                 <ul>
-                    <li style={styles.row}>
-                        <p>• Ray Donovan</p>
+                    <li>
                         <p>
-                            [{' '}
-                            <a
-                                href="https://www.sho.com/ray-donovan"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                SHOWTIME
-                            </a>{' '}
-                            ]
+                            Consolidated a core stack around React, Next.js,
+                            Node.js, and Python; led projects across discovery,
+                            build, and deploy.
                         </p>
                     </li>
-                    <li style={styles.row}>
-                        <p>• Ray Donovan: The Movie</p>
+                    <li>
                         <p>
-                            [{' '}
-                            <a
-                                href="https://www.sho.com/titles/3508117/ray-donovan-the-movie"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                SHOWTIME
-                            </a>{' '}
-                            ]
+                            Mentored engineers, shaped technical direction, and
+                            balanced delivery speed with long-term quality.
                         </p>
                     </li>
-                    <li style={styles.row}>
-                        <p>• Hightown</p>
+                    <li>
                         <p>
-                            [{' '}
-                            <a
-                                href="https://www.starz.com/us/en/series/hightown/57463"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                STARZ
-                            </a>{' '}
-                            ]
-                        </p>
-                    </li>
-                    <li style={styles.row}>
-                        <p>• Bull</p>
-                        <p>
-                            [{' '}
-                            <a
-                                href="https://www.cbs.com/shows/bull/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                CBS
-                            </a>{' '}
-                            ]
-                        </p>
-                    </li>
-                    <li style={styles.row}>
-                        <p>• At Home with Amy Sedaris</p>
-                        <p>
-                            [{' '}
-                            <a
-                                href="https://www.trutv.com/shows/at-home-with-amy-sedaris"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                truTV
-                            </a>{' '}
-                            ]
+                            Deep experience in mobile and web ecosystems, from
+                            hybrid apps to full-stack features in production
+                            environments.
                         </p>
                     </li>
                 </ul>
@@ -247,46 +165,14 @@ const styles: StyleSheetCSS = {
         justifyContent: 'space-between',
         width: '100%',
     },
-    skillRow: {
-        flex: 1,
-        justifyContent: 'space-between',
-    },
-    skillName: {
-        minWidth: 56,
-    },
-    skill: {
-        flex: 1,
-        padding: 8,
-        alignItems: 'center',
-    },
-    progressBar: {
-        flex: 1,
-        background: 'red',
-        marginLeft: 8,
-        height: 8,
-    },
-    hoverLogo: {
-        height: 32,
-        marginBottom: 16,
-    },
     headerContainer: {
         alignItems: 'flex-end',
         width: '100%',
         justifyContent: 'center',
     },
-    hoverText: {
-        marginBottom: 8,
-    },
-    indent: {
-        marginLeft: 24,
-    },
     headerRow: {
         justifyContent: 'space-between',
         alignItems: 'flex-end',
-    },
-    row: {
-        display: 'flex',
-        justifyContent: 'space-between',
     },
 };
 

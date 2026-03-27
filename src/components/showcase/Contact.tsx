@@ -56,29 +56,30 @@ const Contact: React.FC<ContactProps> = (props) => {
         }
         try {
             setIsLoading(true);
-            const res = await fetch(
-                'https://api.henryheffernan.com/api/contact',
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        company,
-                        email,
-                        name,
-                        message,
-                    }),
-                }
-            );
-            // the response will be either {success: true} or {success: false, error: message}
-            const data = (await res.json()) as
-                | {
-                      success: false;
-                      error: string;
-                  }
-                | { success: true };
-            if (data.success) {
+            const contactUrl =
+                process.env.REACT_APP_CONTACT_API ||
+                'http://localhost:8080/api/send-email';
+            const res = await fetch(contactUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    company,
+                    email,
+                    name,
+                    message,
+                }),
+            });
+            const data = (await res.json()) as {
+                message?: string;
+                success?: boolean;
+                error?: string;
+            };
+            const ok =
+                res.ok &&
+                (data.message === 'success' || data.success === true);
+            if (ok) {
                 setFormMessage(`Message successfully sent. Thank you ${name}!`);
                 setCompany('');
                 setEmail('');
@@ -87,7 +88,11 @@ const Contact: React.FC<ContactProps> = (props) => {
                 setFormMessageColor(colors.blue);
                 setIsLoading(false);
             } else {
-                setFormMessage(data.error);
+                const err =
+                    typeof data.error === 'string'
+                        ? data.error
+                        : 'Could not send your message. Please try again.';
+                setFormMessage(err);
                 setFormMessageColor(colors.red);
                 setIsLoading(false);
             }
@@ -116,15 +121,17 @@ const Contact: React.FC<ContactProps> = (props) => {
                 <div style={styles.socials}>
                     <SocialBox
                         icon={ghIcon}
-                        link={'https://github.com/henryjeff'}
+                        link={'https://github.com/davimoreira'}
                     />
                     <SocialBox
                         icon={inIcon}
-                        link={'https://www.linkedin.com/in/henryheffernan/'}
+                        link={
+                            'https://www.linkedin.com/in/davimoreira/'
+                        }
                     />
                     <SocialBox
                         icon={twitterIcon}
-                        link={'https://twitter.com/henryheffernan'}
+                        link={'https://twitter.com/davimoreira'}
                     />
                 </div>
             </div>
@@ -138,8 +145,8 @@ const Contact: React.FC<ContactProps> = (props) => {
                 <br />
                 <p>
                     <b>Email: </b>
-                    <a href="mailto:henryheffernan@gmail.com">
-                        henryheffernan@gmail.com
+                    <a href="mailto:contato@sharkmind.com.br">
+                        contato@sharkmind.com.br
                     </a>
                 </p>
 
