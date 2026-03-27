@@ -112,9 +112,9 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                     <a
                         rel="noreferrer"
                         target="_blank"
-                        href="https://github.com/davimoreira"
+                        href="https://github.com/davimoreira24"
                     >
-                        GitHub (@davimoreira)
+                        GitHub (@davimoreira24)
                     </a>
                     .
                 </p>
