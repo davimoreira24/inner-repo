@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // @ts-ignore
-import area from '../../../assets/audio/area.mp3';
+import liiixo from '../../../assets/audio/LIIIXO.mp3';
 // @ts-ignore
 import travisShow from '../../../assets/pictures/projects/show.mp4';
 import { MusicPlayer } from '../../general';
@@ -50,8 +50,8 @@ const MusicProjects: React.FC<MusicProjectsProps> = () => {
             </p>
             <br />
             <MusicPlayer
-                src={area}
-                title="Area"
+                src={liiixo}
+                title="LIIIXO"
                 subtitle="My favorite track"
                 currentSong={currentSong}
                 setCurrentSong={setCurrentSong}
