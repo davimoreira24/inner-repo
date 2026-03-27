@@ -33,11 +33,11 @@ const About: React.FC<AboutProps> = () => {
                 <br />
                 <p>
                     Since 2025 I&apos;ve been a Senior Developer at Magazine
-                    Luiza, focused
-                    on high-impact experiences for both web and mobile. I work
-                    on the team that built a custom CRM for dynamic page
-                    creation, balancing performance and flexibility. My goal is
-                    scalable, clean software that delivers real business value.
+                    Luiza, focused on high-impact experiences for both web and
+                    mobile. I work on the team that built a custom CRM for
+                    dynamic page creation, balancing performance and
+                    flexibility. My goal is scalable, clean software that
+                    delivers real business value.
                 </p>
                 <br />
                 <p>
