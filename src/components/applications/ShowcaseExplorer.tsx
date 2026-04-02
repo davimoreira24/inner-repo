@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../showcase/Home';
 import About from '../showcase/About';
@@ -15,6 +16,7 @@ import useInitialWindowSize from '../../hooks/useInitialWindowSize';
 export interface ShowcaseExplorerProps extends WindowAppProps {}
 
 const ShowcaseExplorer: React.FC<ShowcaseExplorerProps> = (props) => {
+    const { t } = useTranslation();
     const { initWidth, initHeight } = useInitialWindowSize({ margin: 100 });
 
     return (
@@ -23,12 +25,12 @@ const ShowcaseExplorer: React.FC<ShowcaseExplorerProps> = (props) => {
             left={56}
             width={initWidth}
             height={initHeight}
-            windowTitle="Davi Moreira — Sharkmind Showcase"
+            windowTitle={t('showcase.windowTitle')}
             windowBarIcon="windowExplorerIcon"
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}
-            bottomLeftText={'© Copyright 2026 Davi Moreira'}
+            bottomLeftText={t('showcase.copyright')}
         >
             <Router>
                 <div className="site-page">

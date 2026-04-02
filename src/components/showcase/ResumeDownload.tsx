@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import printer from '../../assets/resume/printer.gif';
 import Resume from '../../assets/resume/davi-cv.pdf';
 
@@ -7,13 +8,14 @@ export interface ResumeDownloadProps {
 }
 
 const ResumeDownload: React.FC<ResumeDownloadProps> = ({ altText }) => {
+    const { t } = useTranslation();
     return (
         <div style={styles.resumeContainer}>
             <img style={styles.resumePrinter} alt="" src={printer} />
             <div style={styles.resumeContainerText}>
-                <h3>{altText ? altText : 'Looking for my resume?'}</h3>
+                <h3>{altText ?? t('resume.title')}</h3>
                 <a rel="noreferrer" target="_blank" href={Resume}>
-                    <p>Click here to download it!</p>
+                    <p>{t('resume.download')}</p>
                 </a>
             </div>
         </div>

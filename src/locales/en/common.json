@@ -1,0 +1,158 @@
+{
+    "languageSwitcher": {
+        "aria": "Language"
+    },
+    "nav": {
+        "home": "HOME",
+        "about": "ABOUT",
+        "experience": "EXPERIENCE",
+        "projects": "PROJECTS",
+        "software": "SOFTWARE",
+        "music": "MUSIC",
+        "sports": "SPORTS",
+        "contact": "CONTACT",
+        "showcaseSubtitle": "Sharkmind · Showcase"
+    },
+    "home": {
+        "role": "Software Engineer"
+    },
+    "about": {
+        "title": "From startup code to millions-scale: my journey as a Software Engineer.",
+        "p1": "My path in software started in 2018 in Fortaleza, when I joined Deway as an intern. What began with Ionic and React Native at a mobile-focused startup turned into six years of steady growth, eventually leading me to Tech Lead. There I solidified my core stack—React, Next.js, Node.js, and Python—and led projects from zero to production.",
+        "p2": "In 2024 I took on a role at RD Saúde (Latin America's largest drugstore retailer), where I owned complex technical solutions: shaping architecture, joining coding dojos, and driving quality through code reviews and high-level technical discussion.",
+        "coodexBefore": "Since 2025 I've been at Coodex, contributing to ",
+        "coodexAfter": "—prompt engineering and full-stack work with Next.js, Vue.js, NestJS, and AWS on an AI-driven commissioning platform.",
+        "thanksBefore": "Thanks for visiting the portfolio. Questions or opportunities? ",
+        "thanksContact": "Get in touch",
+        "thanksMiddle": " or email ",
+        "thanksAfter": ".",
+        "figure1": "Figure 1: me on my first day as an intern.",
+        "githubFollowBefore": "Follow along on ",
+        "githubFollowAfter": "."
+    },
+    "experience": {
+        "coodex": {
+            "company": "Coodex",
+            "linkLabel": "coodex.ai — Meris",
+            "role": "Software Engineer — Meris platform",
+            "present": "2025 – Present",
+            "introBefore": "Coodex builds AI-powered platforms for asset-heavy industries; I work on ",
+            "introAfter": ", a commissioning and EPC data platform powered by vertical AI agents—shipping features end to end with a strong focus on LLM-backed workflows.",
+            "bullet1": "Prompt engineering and iteration on AI-assisted flows, aligning model behaviour with product and compliance needs in production.",
+            "bullet2": "Full-stack delivery with Next.js, Vue.js, NestJS, and AWS—APIs, UIs, and cloud plumbing for reliable releases."
+        },
+        "rd": {
+            "company": "RD Saúde",
+            "linkLabel": "rdsaude.com.br",
+            "role": "Technical Owner — Complex Solutions",
+            "year": "2024",
+            "intro": "RD Saúde is Latin America's largest drugstore retailer. I joined to own technically demanding initiatives where architecture decisions, collaboration, and quality gates directly affect millions of customers.",
+            "bullet1": "Led design and delivery of complex solutions—from high-level architecture to hands-on implementation.",
+            "bullet2": "Ran coding dojos and deep code reviews to raise the bar on engineering practices and shared ownership.",
+            "bullet3": "Partnered with product and leadership on technical trade-offs, prioritizing reliability and maintainability at scale."
+        },
+        "deway": {
+            "company": "Deway",
+            "linkLabel": "deway.com.br",
+            "role": "Intern → Tech Lead",
+            "years": "2018 – 2024",
+            "intro": "I started in Fortaleza as an intern at a mobile-focused startup. What began with Ionic and React Native turned into six years of growth—ending as Tech Lead—shipping products from zero to production alongside a growing team.",
+            "bullet1": "Consolidated a core stack around React, Next.js, Node.js, and Python; led projects across discovery, build, and deploy.",
+            "bullet2": "Mentored engineers, shaped technical direction, and balanced delivery speed with long-term quality.",
+            "bullet3": "Deep experience in mobile and web ecosystems, from hybrid apps to full-stack features in production environments."
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "intro": "I am currently employed, however if you have any opportunities, feel free to reach out - I would love to chat! You can reach me via my personal email, or fill out the form below!",
+        "emailLabel": "Email:",
+        "yourName": "Your name:",
+        "emailField": "Email:",
+        "companyOptional": "Company (optional):",
+        "message": "Message:",
+        "placeholderName": "Name",
+        "placeholderEmail": "Email",
+        "placeholderCompany": "Company",
+        "placeholderMessage": "Message",
+        "sendMessage": "Send Message",
+        "sending": "Sending",
+        "footerHint": "All messages get forwarded straight to my personal email",
+        "requiredHint": "= required",
+        "errorValidate": "Form unable to validate, please try again.",
+        "success": "Message successfully sent. Thank you {{name}}!",
+        "errorSend": "Could not send your message. Please try again.",
+        "errorNetwork": "There was an error sending your message. Please try again.",
+        "resumeAlt": "Need a copy of my Resume?"
+    },
+    "resume": {
+        "title": "Looking for my resume?",
+        "download": "Click here to download it!"
+    },
+    "projects": {
+        "title": "Projects",
+        "subtitle": "& Hobbies",
+        "intro": "Click on one of the areas below to check out some of my favorite projects I've done in that field. I spent a lot of time to include a lot of visuals and interactive media to showcase each project. Enjoy!",
+        "softwareTitle": "Software",
+        "softwareSubtitle": "PROJECTS",
+        "musicTitle": "Music",
+        "musicSubtitle": "VENTURES",
+        "sportsTitle": "Sports",
+        "sportsSubtitle": "PASSION"
+    },
+    "sports": {
+        "title": "Sports",
+        "subtitle": "Passion",
+        "p1": "I follow sports closely—especially basketball and football (soccer). Watching games, reading about athletes, and seeing how teams prepare is something I genuinely enjoy alongside work and music.",
+        "p2": "Two athletes I look up to are Stephen Curry and Cristiano Ronaldo. I'm a huge fan of both: Curry's work ethic, humility, and clutch mindset; Ronaldo's discipline, longevity, and obsession with improvement. Their mentalities inspire how I show up in my own career—consistency, resilience, and always pushing the next step.",
+        "curryCaption": "Stephen Curry — inspiration on and off the court.",
+        "cr7Caption": "Cristiano Ronaldo — drive, standards, and longevity."
+    },
+    "music": {
+        "title": "Music & Sound",
+        "subtitle": "Personal",
+        "p1": "Music is a huge part of my life—I listen to almost everything, from hip-hop and electronic to rock, MPB, and whatever catches my ear. I don't stick to one genre; I enjoy discovering new sounds and revisiting old favorites.",
+        "p2": "I also go to a lot of live shows. There's nothing quite like being in the crowd, and some of my best memories are from concerts. Below is a clip from one of them—a Travis Scott show—with me in the frame.",
+        "videoCaption": "Video: Travis Scott show—footage with me in the crowd.",
+        "favoriteTitle": "Favorite track",
+        "favoriteIntro": "If I had to pick one song to keep on repeat, it would be this one—press play below.",
+        "trackSubtitle": "My favorite track"
+    },
+    "wordle": {
+        "subtitle": "Five letters. No cartilage in its frame—only what circles when the bait is gone.",
+        "youWin": "You win!",
+        "gameOver": "Game Over",
+        "winMessage": "You surfaced the hunter: the name that hides in Sharkmind and the deep alike.",
+        "loseMessage": "The silhouette was never decoration—only five letters between the reef and the logo.",
+        "restart": "Restart Game"
+    },
+    "credits": {
+        "windowTitle": "Credits",
+        "title": "Credits",
+        "tagline": "Sharkmind / Davi Moreira, 2026",
+        "clickContinue": "Click to continue...",
+        "sections": {
+            "engineering": "Engineering & Design",
+            "modeling": "Modeling & Texturing",
+            "sound": "Sound Design",
+            "thanks": "Special Thanks",
+            "inspiration": "Inspiration"
+        },
+        "roles": {
+            "all": "All",
+            "texturing": "Texturing, Composition, & UV",
+            "computerModel": "Computer Model",
+            "environmentModels": "Environment Models",
+            "mixing": "Mixing, Composition, & Foley",
+            "officeAmbience": "Office Ambience",
+            "startupSound": "Microsoft"
+        }
+    },
+    "showcase": {
+        "windowTitle": "Davi Moreira — Sharkmind Showcase",
+        "copyright": "© Copyright 2026 Davi Moreira"
+    },
+    "softwarePage": {
+        "moreGithubBefore": "More on ",
+        "moreGithubAfter": "."
+    }
+}

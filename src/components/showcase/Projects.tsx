@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
 import software from '../../assets/pictures/projects/software.gif';
 import sports from '../../assets/pictures/projects/sports.gif';
@@ -50,7 +51,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
                     style={Object.assign(
                         {},
                         styles.projectLinkImage,
-                        iconStyle
+                        iconStyle,
                     )}
                     alt=""
                 />
@@ -65,38 +66,34 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
 };
 
 const Projects: React.FC<ProjectsProps> = (props) => {
+    const { t } = useTranslation();
     return (
         <div className="site-page-content">
-            <h1>Projects</h1>
-            <h3>& Hobbies</h3>
+            <h1>{t('projects.title')}</h1>
+            <h3>{t('projects.subtitle')}</h3>
             <br />
-            <p>
-                Click on one of the areas below to check out some of my favorite
-                projects I've done in that field. I spent a lot of time to
-                include a lot of visuals and interactive media to showcase each
-                project. Enjoy!
-            </p>
+            <p>{t('projects.intro')}</p>
             <br />
             <div style={styles.projectLinksContainer}>
                 <ProjectBox
                     icon={software}
                     iconStyle={styles.computerIcon}
-                    title="Software"
-                    subtitle="PROJECTS"
+                    title={t('projects.softwareTitle')}
+                    subtitle={t('projects.softwareSubtitle')}
                     route="software"
                 />
                 <ProjectBox
                     icon={music}
                     iconStyle={styles.musicIcon}
-                    title="Music"
-                    subtitle="VENTURES"
+                    title={t('projects.musicTitle')}
+                    subtitle={t('projects.musicSubtitle')}
                     route="music"
                 />
                 <ProjectBox
                     icon={sports}
                     iconStyle={styles.sportsIcon}
-                    title="Sports"
-                    subtitle="PASSION"
+                    title={t('projects.sportsTitle')}
+                    subtitle={t('projects.sportsSubtitle')}
                     route="sports"
                 />
             </div>

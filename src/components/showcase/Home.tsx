@@ -1,5 +1,7 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from '../general';
+import LanguageSwitcher from '../LanguageSwitcher';
 
 import { useNavigate } from 'react-router';
 
@@ -7,6 +9,7 @@ export interface HomeProps {}
 
 const Home: React.FC<HomeProps> = (props) => {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     const goToContact = () => {
         navigate('/contact');
@@ -14,26 +17,27 @@ const Home: React.FC<HomeProps> = (props) => {
 
     return (
         <div style={styles.page}>
+            <LanguageSwitcher style={styles.langSwitch} />
             <div style={styles.header}>
                 <h1 style={styles.name}>Davi Moreira</h1>
-                <h2>Software Engineer</h2>
+                <h2>{t('home.role')}</h2>
             </div>
             <div style={styles.buttons}>
-                <Link containerStyle={styles.link} to="about" text="ABOUT" />
+                <Link containerStyle={styles.link} to="about" text={t('nav.about')} />
                 <Link
                     containerStyle={styles.link}
                     to="experience"
-                    text="EXPERIENCE"
+                    text={t('nav.experience')}
                 />
                 <Link
                     containerStyle={styles.link}
                     to="projects"
-                    text="PROJECTS"
+                    text={t('nav.projects')}
                 />
                 <Link
                     containerStyle={styles.link}
                     to="contact"
-                    text="CONTACT"
+                    text={t('nav.contact')}
                 />
             </div>
             <div style={styles.forHireContainer} onMouseDown={goToContact}>
@@ -53,6 +57,11 @@ const styles: StyleSheetCSS = {
         alignItems: 'center',
         flexDirection: 'column',
         height: '100%',
+    },
+    langSwitch: {
+        position: 'absolute',
+        top: 24,
+        right: 24,
     },
     header: {
         textAlign: 'center',

@@ -1,49 +1,53 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Window from '../os/Window';
 import { useInterval } from 'usehooks-ts';
 import { motion } from 'framer-motion';
 
 export interface CreditsProps extends WindowAppProps {}
 
-const CREDITS = [
-    {
-        title: 'Engineering & Design',
-        rows: [['Davi Moreira', 'All']],
-    },
-    {
-        title: 'Modeling & Texturing',
-        rows: [
-            ['Davi Moreira', 'Texturing, Composition, & UV'],
-            ['Mickael Boitte', 'Computer Model'],
-            ['Sean Nicolas', 'Environment Models'],
-        ],
-    },
-    {
-        title: 'Sound Design',
-        rows: [
-            ['Davi Moreira', 'Mixing, Composition, & Foley'],
-            ['Sound Cassette', 'Office Ambience'],
-            ['Windows 95 Startup Sound', 'Microsoft'],
-        ],
-    },
-    {
-        title: 'Special Thanks',
-        rows: [
-            ['Bruno Simon', 'SimonDev'],
-            ['Lorelei Kravinsky', 'Scott Bass'],
-            ['Trey Briccetti', 'Mom, Dad & Angela'],
-        ],
-    },
-    {
-        title: 'Inspiration',
-        rows: [
-            ['Bruno Simon', 'Jesse Zhou'],
-            ['Pink Yellow', 'Vivek Patel'],
-        ],
-    },
-];
-
 const Credits: React.FC<CreditsProps> = (props) => {
+    const { t } = useTranslation();
+    const CREDITS = useMemo(
+        () => [
+            {
+                title: t('credits.sections.engineering'),
+                rows: [['Davi Moreira', t('credits.roles.all')]],
+            },
+            {
+                title: t('credits.sections.modeling'),
+                rows: [
+                    ['Davi Moreira', t('credits.roles.texturing')],
+                    ['Mickael Boitte', t('credits.roles.computerModel')],
+                    ['Sean Nicolas', t('credits.roles.environmentModels')],
+                ],
+            },
+            {
+                title: t('credits.sections.sound'),
+                rows: [
+                    ['Davi Moreira', t('credits.roles.mixing')],
+                    ['Sound Cassette', t('credits.roles.officeAmbience')],
+                    ['Windows 95 Startup Sound', t('credits.roles.startupSound')],
+                ],
+            },
+            {
+                title: t('credits.sections.thanks'),
+                rows: [
+                    ['Bruno Simon', 'SimonDev'],
+                    ['Lorelei Kravinsky', 'Scott Bass'],
+                    ['Trey Briccetti', 'Mom, Dad & Angela'],
+                ],
+            },
+            {
+                title: t('credits.sections.inspiration'),
+                rows: [
+                    ['Bruno Simon', 'Jesse Zhou'],
+                    ['Pink Yellow', 'Vivek Patel'],
+                ],
+            },
+        ],
+        [t],
+    );
     const [currentSlide, setCurrentSlide] = useState(0);
     const [time, setTime] = useState(0);
 
@@ -73,20 +77,20 @@ const Credits: React.FC<CreditsProps> = (props) => {
             left={48}
             width={1100}
             height={800}
-            windowTitle="Credits"
+            windowTitle={t('credits.windowTitle')}
             windowBarIcon="windowExplorerIcon"
             closeWindow={props.onClose}
             onInteract={props.onInteract}
             minimizeWindow={props.onMinimize}
-            bottomLeftText={'© Copyright 2026 Davi Moreira'}
+            bottomLeftText={t('showcase.copyright')}
         >
             <div
                 onMouseDown={nextSlide}
                 className="site-page"
                 style={styles.credits}
             >
-                <h2>Credits</h2>
-                <p>Sharkmind / Davi Moreira, 2026</p>
+                <h2>{t('credits.title')}</h2>
+                <p>{t('credits.tagline')}</p>
                 <br />
                 <br />
                 <br />
@@ -112,7 +116,7 @@ const Credits: React.FC<CreditsProps> = (props) => {
                         </motion.div>
                     }
                 </div>
-                <p>Click to continue...</p>
+                <p>{t('credits.clickContinue')}</p>
                 <br />
                 <div style={styles.nextSlideTimer}>
                     {/* make a time number of dots */}

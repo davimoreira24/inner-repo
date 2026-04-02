@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import colors from '../../constants/colors';
 import twitterIcon from '../../assets/pictures/contact-twitter.png';
 import ghIcon from '../../assets/pictures/contact-gh.png';
@@ -31,6 +32,7 @@ const SocialBox: React.FC<SocialBoxProps> = ({ link, icon }) => {
 };
 
 const Contact: React.FC<ContactProps> = (props) => {
+    const { t } = useTranslation();
     const [company, setCompany] = useState('');
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -50,7 +52,7 @@ const Contact: React.FC<ContactProps> = (props) => {
 
     async function submitForm() {
         if (!isFormValid) {
-            setFormMessage('Form unable to validate, please try again.');
+            setFormMessage(t('contact.errorValidate'));
             setFormMessageColor('red');
             return;
         }
@@ -77,10 +79,9 @@ const Contact: React.FC<ContactProps> = (props) => {
                 error?: string;
             };
             const ok =
-                res.ok &&
-                (data.message === 'success' || data.success === true);
+                res.ok && (data.message === 'success' || data.success === true);
             if (ok) {
-                setFormMessage(`Message successfully sent. Thank you ${name}!`);
+                setFormMessage(t('contact.success', { name }));
                 setCompany('');
                 setEmail('');
                 setName('');
@@ -91,15 +92,13 @@ const Contact: React.FC<ContactProps> = (props) => {
                 const err =
                     typeof data.error === 'string'
                         ? data.error
-                        : 'Could not send your message. Please try again.';
+                        : t('contact.errorSend');
                 setFormMessage(err);
                 setFormMessageColor(colors.red);
                 setIsLoading(false);
             }
         } catch (e) {
-            setFormMessage(
-                'There was an error sending your message. Please try again.'
-            );
+            setFormMessage(t('contact.errorNetwork'));
             setFormMessageColor(colors.red);
             setIsLoading(false);
         }
@@ -117,7 +116,7 @@ const Contact: React.FC<ContactProps> = (props) => {
     return (
         <div className="site-page-content">
             <div style={styles.header}>
-                <h1>Contact</h1>
+                <h1>{t('contact.title')}</h1>
                 <div style={styles.socials}>
                     <SocialBox
                         icon={ghIcon}
@@ -136,15 +135,10 @@ const Contact: React.FC<ContactProps> = (props) => {
                 </div>
             </div>
             <div className="text-block">
-                <p>
-                    I am currently employed, however if you have any
-                    opportunities, feel free to reach out - I would love to
-                    chat! You can reach me via my personal email, or fill out
-                    the form below!
-                </p>
+                <p>{t('contact.intro')}</p>
                 <br />
                 <p>
-                    <b>Email: </b>
+                    <b>{t('contact.emailLabel')} </b>
                     <a href="mailto:techdavimoreira@gmail.com">
                         techdavimoreira@gmail.com
                     </a>
@@ -154,14 +148,14 @@ const Contact: React.FC<ContactProps> = (props) => {
                     <label>
                         <p>
                             {!name && <span style={styles.star}>*</span>}
-                            <b>Your name:</b>
+                            <b>{t('contact.yourName')}</b>
                         </p>
                     </label>
                     <input
                         style={styles.formItem}
                         type="text"
                         name="name"
-                        placeholder="Name"
+                        placeholder={t('contact.placeholderName')}
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -170,39 +164,39 @@ const Contact: React.FC<ContactProps> = (props) => {
                             {!validateEmail(email) && (
                                 <span style={styles.star}>*</span>
                             )}
-                            <b>Email:</b>
+                            <b>{t('contact.emailField')}</b>
                         </p>
                     </label>
                     <input
                         style={styles.formItem}
                         type="email"
                         name="email"
-                        placeholder="Email"
+                        placeholder={t('contact.placeholderEmail')}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <label>
                         <p>
-                            <b>Company (optional):</b>
+                            <b>{t('contact.companyOptional')}</b>
                         </p>
                     </label>
                     <input
                         style={styles.formItem}
                         type="company"
                         name="company"
-                        placeholder="Company"
+                        placeholder={t('contact.placeholderCompany')}
                         value={company}
                         onChange={(e) => setCompany(e.target.value)}
                     />
                     <label>
                         <p>
                             {!message && <span style={styles.star}>*</span>}
-                            <b>Message:</b>
+                            <b>{t('contact.message')}</b>
                         </p>
                     </label>
                     <textarea
                         name="message"
-                        placeholder="Message"
+                        placeholder={t('contact.placeholderMessage')}
                         style={styles.formItem}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
@@ -216,23 +210,23 @@ const Contact: React.FC<ContactProps> = (props) => {
                             onMouseDown={submitForm}
                         >
                             {!isLoading ? (
-                                'Send Message'
+                                t('contact.sendMessage')
                             ) : (
-                                <p className="loading">Sending</p>
+                                <p className="loading">{t('contact.sending')}</p>
                             )}
                         </button>
                         <div style={styles.formInfo}>
                             <p
                                 style={Object.assign(
                                     {},
-                                    { color: formMessageColor }
+                                    { color: formMessageColor },
                                 )}
                             >
                                 <b>
                                     <sub>
                                         {formMessage
                                             ? `${formMessage}`
-                                            : ' All messages get forwarded straight to my personal email'}
+                                            : ` ${t('contact.footerHint')}`}
                                     </sub>
                                 </b>
                             </p>
@@ -240,8 +234,8 @@ const Contact: React.FC<ContactProps> = (props) => {
                                 <sub>
                                     {!isFormValid ? (
                                         <span>
-                                            <b style={styles.star}>*</b> =
-                                            required
+                                            <b style={styles.star}>*</b>{' '}
+                                            {t('contact.requiredHint')}
                                         </span>
                                     ) : (
                                         '\xa0'
@@ -252,7 +246,7 @@ const Contact: React.FC<ContactProps> = (props) => {
                     </div>
                 </div>
             </div>
-            <ResumeDownload altText="Need a copy of my Resume?" />
+            <ResumeDownload altText={t('contact.resumeAlt')} />
         </div>
     );
 };

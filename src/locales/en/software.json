@@ -1,0 +1,58 @@
+{
+    "title": "Software",
+    "subtitle": "Projects",
+    "intro": "Highlights from recent work—mobile and web products at scale in Brazilian pharmacy retail, fuel networks, beauty and barbershop operations, agricultural programs, automotive technical platforms, logistics tooling, investment and wealth platforms, plus enterprise AI platforms.",
+    "linksHeading": "Links:",
+    "drogasil": {
+        "title": "Drogasil (RD Saúde)",
+        "body": "At RD Saúde I owned complex solutions behind products like the Drogasil app: Latin America's largest drugstore ecosystem, where reliability, performance, and a polished customer journey matter every day. I contributed across architecture, quality practices (reviews, dojos), and shipping features end to end.",
+        "figure": "Figure 1: Screen capture from the Drogasil app experience.",
+        "linkDrogasil": "[Drogasil] — brand & channels",
+        "linkRd": "[RD Saúde] — company site"
+    },
+    "meris": {
+        "title": "Meris (Coodex)",
+        "body": "Meris is an AI-powered commissioning and EPC data platform for asset-intensive industries—covering engineering, procurement, and construction workflows from planning through handover. It uses vertical AI agents to automate fragile, error-prone steps in commissioning and validation, with LLM-backed flows that keep complex projects traceable, compliant, and moving in production.",
+        "iframeTitle": "Meris — product overview",
+        "figure": "Figure 2: Meris — product overview (Vimeo).",
+        "linkMeris": "[Meris] — coodex.ai/meris",
+        "linkCoodex": "[Coodex] — company site"
+    },
+    "spteleva": {
+        "title": "SP T'LEVA",
+        "body": "SP T'LEVA is a mobile app for finding and following SP network fuel stations—surfacing nearby units, practical driver-facing details, and a clearer picture of the network in one flow. It also pulls perks and benefits into a single hub so refueling stays practical, connected, and easier to navigate on the road.",
+        "figure": "Figure 3: SP T'LEVA — product screens.",
+        "linkSite": "[SP T'LEVA] — official site",
+        "linkAppStore": "[App Store] — iOS"
+    },
+    "schon": {
+        "title": "SCHON",
+        "body": "SCHON is a management app for beauty salons, barbershops, and businesses in the segment—bringing essential operational routines into one place. It streamlines scheduling, client and service organization, day-to-day flow, and back-office support—helping teams run more efficiently, deliver better service, and offer a modern experience for staff and clients.",
+        "figure": "Figure 4: SCHON — product screens."
+    },
+    "forrageiras": {
+        "title": "Forrageiras do Ceará",
+        "body": "Forrageiras do Ceará is a full-featured, intuitive app for consultants, technicians, and teams involved in managing and monitoring forage production programs across the state. It pairs a modern interface with essential context—local weather signals such as precipitation, temperature, and wind—alongside registration and management of participants, properties, and program data. The product supports continuous tracking of activities and technical visits, capturing progress and results in real time, and delivers reports and performance indicators to assess impact and how field actions are performing.",
+        "figure": "Figure 5: Forrageiras do Ceará — product screens."
+    },
+    "simplo": {
+        "title": "Simplo",
+        "p1": "Since 1993, Simplo has worked to make automotive technical knowledge easier to apply—building on early leadership in embedded electronics and growing into a Latin American reference for technical content trusted by tens of thousands of repair professionals. The mission is to democratize that knowledge: turning complex engineering information into practical, day-to-day guidance for workshops.",
+        "p2": "The Simplo digital ecosystem spans web and mobile, bringing detailed manuals, electrical diagrams, diagnostic tables, and maintenance procedures into one place for light and heavy vehicles, hybrids, electric powertrains, motorcycles, and tractors—with continuous updates that follow the market. It also supports intelligent technical workflows: logging service sessions, reviewing history, and receiving notifications about new versions and releases—so deep expertise translates into productivity, repair accuracy, and stronger results for shops of every size.",
+        "figureWeb": "Figure 6: Simplo — web experience.",
+        "figureApp": "Figure 7: Simplo — app experience.",
+        "linkBrasil": "[Simplo Brasil] — simplusbr.com",
+        "linkOnline": "[Simplo Online] — web access"
+    },
+    "corpvs": {
+        "title": "Corpvs Log",
+        "body": "Corpvs Log is a digital solution for organizing logistics operations and making them easier to see end to end—supporting process control, status tracking, and a standardized operational flow. The experience is built around practicality: reducing rework, improving communication across teams, and driving efficiency across transport and distribution routines.",
+        "figure": "Figure 8: Corpvs Log — product screens.",
+        "linkService": "[Corpvs Log] — service page"
+    },
+    "carteira": {
+        "title": "Carteira de Valor",
+        "body": "Carteira de Valor is a system for following investments with more clarity and structure. It brings portfolio information together in one place, streamlines tracking of contributions and how net worth evolves over time, and supports decision-making with an intuitive, data-driven experience—focused on practicality and a consolidated view of the portfolio.",
+        "figure": "Figure 9: Carteira de Valor — product screens."
+    }
+}

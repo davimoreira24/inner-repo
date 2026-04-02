@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ResumeDownload from './ResumeDownload';
 
 export interface ExperienceProps {}
 
 const Experience: React.FC<ExperienceProps> = () => {
+    const { t } = useTranslation();
     return (
         <div className="site-page-content">
             <ResumeDownload />
@@ -57,53 +59,44 @@ const Experience: React.FC<ExperienceProps> = () => {
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>Coodex</h1>
+                        <h1>{t('experience.coodex.company')}</h1>
                         <a
                             rel="noreferrer"
                             target="_blank"
                             href="https://coodex.ai/meris"
                         >
-                            <h4>coodex.ai — Meris</h4>
+                            <h4>{t('experience.coodex.linkLabel')}</h4>
                         </a>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Software Engineer — Meris platform</h3>
+                        <h3>{t('experience.coodex.role')}</h3>
                         <b>
-                            <p>2025 – Present</p>
+                            <p>{t('experience.coodex.present')}</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
                 <p>
-                    Coodex builds AI-powered platforms for asset-heavy
-                    industries; I work on{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://coodex.ai/meris"
-                    >
-                        Meris
-                    </a>
-                    , a commissioning and EPC data platform powered by vertical
-                    AI agents—shipping features end to end with a strong focus on
-                    LLM-backed workflows.
+                    <>
+                        {t('experience.coodex.introBefore')}
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://coodex.ai/meris"
+                        >
+                            Meris
+                        </a>
+                        {t('experience.coodex.introAfter')}
+                    </>
                 </p>
                 <br />
                 <ul>
                     <li>
-                        <p>
-                            Prompt engineering and iteration on AI-assisted
-                            flows, aligning model behaviour with product and
-                            compliance needs in production.
-                        </p>
+                        <p>{t('experience.coodex.bullet1')}</p>
                     </li>
                     <li>
-                        <p>
-                            Full-stack delivery with Next.js, Vue.js, NestJS, and
-                            AWS—APIs, UIs, and cloud plumbing for reliable
-                            releases.
-                        </p>
+                        <p>{t('experience.coodex.bullet2')}</p>
                     </li>
                 </ul>
             </div>
@@ -111,50 +104,35 @@ const Experience: React.FC<ExperienceProps> = () => {
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>RD Saúde</h1>
+                        <h1>{t('experience.rd.company')}</h1>
                         <a
                             rel="noreferrer"
                             target="_blank"
                             href="https://rdsaude.com.br/"
                         >
-                            <h4>rdsaude.com.br</h4>
+                            <h4>{t('experience.rd.linkLabel')}</h4>
                         </a>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Technical Owner — Complex Solutions</h3>
+                        <h3>{t('experience.rd.role')}</h3>
                         <b>
-                            <p>2024</p>
+                            <p>{t('experience.rd.year')}</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
-                <p>
-                    RD Saúde is Latin America&apos;s largest drugstore retailer.
-                    I joined to own technically demanding initiatives where
-                    architecture decisions, collaboration, and quality gates
-                    directly affect millions of customers.
-                </p>
+                <p>{t('experience.rd.intro')}</p>
                 <br />
                 <ul>
                     <li>
-                        <p>
-                            Led design and delivery of complex solutions—from
-                            high-level architecture to hands-on implementation.
-                        </p>
+                        <p>{t('experience.rd.bullet1')}</p>
                     </li>
                     <li>
-                        <p>
-                            Ran coding dojos and deep code reviews to raise the
-                            bar on engineering practices and shared ownership.
-                        </p>
+                        <p>{t('experience.rd.bullet2')}</p>
                     </li>
                     <li>
-                        <p>
-                            Partnered with product and leadership on technical
-                            trade-offs, prioritizing reliability and maintainability
-                            at scale.
-                        </p>
+                        <p>{t('experience.rd.bullet3')}</p>
                     </li>
                 </ul>
             </div>
@@ -162,51 +140,35 @@ const Experience: React.FC<ExperienceProps> = () => {
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
-                        <h1>Deway</h1>
+                        <h1>{t('experience.deway.company')}</h1>
                         <a
                             rel="noreferrer"
                             target="_blank"
                             href="https://deway.com.br/"
                         >
-                            <h4>deway.com.br</h4>
+                            <h4>{t('experience.deway.linkLabel')}</h4>
                         </a>
                     </div>
                     <div style={styles.headerRow}>
-                        <h3>Intern → Tech Lead</h3>
+                        <h3>{t('experience.deway.role')}</h3>
                         <b>
-                            <p>2018 – 2024</p>
+                            <p>{t('experience.deway.years')}</p>
                         </b>
                     </div>
                 </div>
             </div>
             <div className="text-block">
-                <p>
-                    I started in Fortaleza as an intern at a mobile-focused
-                    startup. What began with Ionic and React Native turned into
-                    six years of growth—ending as Tech Lead—shipping products from
-                    zero to production alongside a growing team.
-                </p>
+                <p>{t('experience.deway.intro')}</p>
                 <br />
                 <ul>
                     <li>
-                        <p>
-                            Consolidated a core stack around React, Next.js,
-                            Node.js, and Python; led projects across discovery,
-                            build, and deploy.
-                        </p>
+                        <p>{t('experience.deway.bullet1')}</p>
                     </li>
                     <li>
-                        <p>
-                            Mentored engineers, shaped technical direction, and
-                            balanced delivery speed with long-term quality.
-                        </p>
+                        <p>{t('experience.deway.bullet2')}</p>
                     </li>
                     <li>
-                        <p>
-                            Deep experience in mobile and web ecosystems, from
-                            hybrid apps to full-stack features in production
-                            environments.
-                        </p>
+                        <p>{t('experience.deway.bullet3')}</p>
                     </li>
                 </ul>
             </div>

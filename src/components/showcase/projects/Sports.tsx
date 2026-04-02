@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const publicPath = (file: string) =>
     `${process.env.PUBLIC_URL || ''}/images/sports/${file}`;
@@ -6,28 +7,16 @@ const publicPath = (file: string) =>
 export interface SportsProjectsProps {}
 
 const SportsProjects: React.FC<SportsProjectsProps> = () => {
+    const { t } = useTranslation();
     return (
         <div className="site-page-content">
-            <h1>Sports</h1>
-            <h3>Passion</h3>
+            <h1>{t('sports.title')}</h1>
+            <h3>{t('sports.subtitle')}</h3>
             <br />
             <div className="text-block">
-                <p>
-                    I follow sports closely—especially <b>basketball</b> and{' '}
-                    <b>football (soccer)</b>. Watching games, reading about
-                    athletes, and seeing how teams prepare is something I
-                    genuinely enjoy alongside work and music.
-                </p>
+                <p>{t('sports.p1')}</p>
                 <br />
-                <p>
-                    Two athletes I look up to are <b>Stephen Curry</b> and{' '}
-                    <b>Cristiano Ronaldo</b>. I&apos;m a huge fan of both:
-                    Curry&apos;s work ethic, humility, and clutch mindset;
-                    Ronaldo&apos;s discipline, longevity, and obsession with
-                    improvement. Their mentalities inspire how I show up in my
-                    own career—consistency, resilience, and always pushing the
-                    next step.
-                </p>
+                <p>{t('sports.p2')}</p>
             </div>
             <br />
             <div style={styles.photoRow}>
@@ -40,8 +29,7 @@ const SportsProjects: React.FC<SportsProjectsProps> = () => {
                     />
                     <p style={styles.caption}>
                         <sub>
-                            <b>Stephen Curry</b> — inspiration on and off the
-                            court.
+                            <b>{t('sports.curryCaption')}</b>
                         </sub>
                     </p>
                 </div>
@@ -54,8 +42,7 @@ const SportsProjects: React.FC<SportsProjectsProps> = () => {
                     />
                     <p style={styles.caption}>
                         <sub>
-                            <b>Cristiano Ronaldo</b> — drive, standards, and
-                            longevity.
+                            <b>{t('sports.cr7Caption')}</b>
                         </sub>
                     </p>
                 </div>

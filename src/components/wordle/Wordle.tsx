@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, useAnimation } from 'framer-motion';
 import WORDS from './Words';
 import { Easing } from '../general/Animation';
@@ -67,7 +68,7 @@ const KeyboardLetter: React.FC<KeyboardLetterProps> = ({
                 styles.letterBox,
                 isInWord && { backgroundColor: 'yellow' },
                 isInPlace && { backgroundColor: 'lightgreen' },
-                notInWord && { backgroundColor: 'gray' }
+                notInWord && { backgroundColor: 'gray' },
             )}
         >
             <p>{letter}</p>
@@ -111,7 +112,7 @@ const GuessLetter: React.FC<GuessLetterProps> = ({
                 isInWord && { backgroundColor: 'yellow' },
                 isInPlace && { backgroundColor: 'lightgreen' },
                 !guessed && { backgroundColor: 'white' },
-                letter === ' ' && styles.emptyBox
+                letter === ' ' && styles.emptyBox,
             )}
         >
             <h3>
@@ -214,6 +215,7 @@ const ROWS = [TOP_ROW, MIDDLE_ROW, BOTTOM_ROW];
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 const Wordle: React.FC<WordleProps> = () => {
+    const { t } = useTranslation();
     const word = 'SHARK';
     const [guesses, setGuesses] = useState<string[]>([]);
     const [gameOver, setGameOver] = useState(false);
@@ -274,10 +276,7 @@ const Wordle: React.FC<WordleProps> = () => {
         <div style={styles.container}>
             <div style={styles.header}>
                 <h2>Daviordle</h2>
-                <p>
-                    Five letters. No cartilage in its frame—only what circles
-                    when the bait is gone.
-                </p>
+                <p>{t('wordle.subtitle')}</p>
             </div>
             <motion.div
                 variants={gameOverAnimations}
@@ -286,14 +285,12 @@ const Wordle: React.FC<WordleProps> = () => {
                 style={Object.assign(
                     {},
                     styles.gameOverContainer,
-                    gameOver && { zIndex: 1000 }
+                    gameOver && { zIndex: 1000 },
                 )}
             >
-                <h2>{won ? 'You win!' : 'Game Over'}</h2>
+                <h2>{won ? t('wordle.youWin') : t('wordle.gameOver')}</h2>
                 <p>
-                    {won
-                        ? 'You surfaced the hunter: the name that hides in Sharkmind and the deep alike.'
-                        : 'The silhouette was never decoration—only five letters between the reef and the logo.'}
+                    {won ? t('wordle.winMessage') : t('wordle.loseMessage')}
                 </p>
                 <br />
                 <GuessWord
@@ -306,7 +303,7 @@ const Wordle: React.FC<WordleProps> = () => {
                 />
                 <br />
                 <div className="site-button" onMouseDown={restart}>
-                    Restart Game
+                    {t('wordle.restart')}
                 </div>
             </motion.div>
             <motion.div

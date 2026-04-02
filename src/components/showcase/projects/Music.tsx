@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 // @ts-ignore
 import liiixo from '../../../assets/audio/LIIIXO.mp3';
 // @ts-ignore
@@ -9,50 +10,37 @@ import VideoAsset from '../../general/VideoAsset';
 export interface MusicProjectsProps {}
 
 const MusicProjects: React.FC<MusicProjectsProps> = () => {
+    const { t } = useTranslation();
     const [currentSong, setCurrentSong] = useState<string>('');
 
     return (
         <div className="site-page-content">
-            <h1>Music &amp; Sound</h1>
-            <h3>Personal</h3>
+            <h1>{t('music.title')}</h1>
+            <h3>{t('music.subtitle')}</h3>
             <br />
             <div className="text-block">
-                <p>
-                    Music is a huge part of my life—I listen to almost everything,
-                    from hip-hop and electronic to rock, MPB, and whatever catches
-                    my ear. I don&apos;t stick to one genre; I enjoy discovering new
-                    sounds and revisiting old favorites.
-                </p>
+                <p>{t('music.p1')}</p>
                 <br />
-                <p>
-                    I also go to a lot of live shows. There&apos;s nothing quite
-                    like being in the crowd, and some of my best memories are from
-                    concerts. Below is a clip from one of them—a Travis Scott
-                    show—with me in the frame.
-                </p>
+                <p>{t('music.p2')}</p>
             </div>
             <br />
             <div className="captioned-image">
                 <VideoAsset src={travisShow} />
                 <p style={styles.caption}>
                     <sub>
-                        <b>Video:</b> Travis Scott show—footage with me in the
-                        crowd.
+                        <b>{t('music.videoCaption')}</b>
                     </sub>
                 </p>
             </div>
             <br />
-            <h2>Favorite track</h2>
+            <h2>{t('music.favoriteTitle')}</h2>
             <br />
-            <p>
-                If I had to pick one song to keep on repeat, it would be this
-                one—press play below.
-            </p>
+            <p>{t('music.favoriteIntro')}</p>
             <br />
             <MusicPlayer
                 src={liiixo}
                 title="LIIIXO"
-                subtitle="My favorite track"
+                subtitle={t('music.trackSubtitle')}
                 currentSong={currentSong}
                 setCurrentSong={setCurrentSong}
             />

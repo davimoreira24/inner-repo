@@ -1,0 +1,58 @@
+{
+    "title": "Software",
+    "subtitle": "Projetos",
+    "intro": "Destaques do trabalho recente—produtos mobile e web em escala no varejo farmacêutico brasileiro, redes de combustível, operações de beleza e barbearia, programas agrícolas, plataformas técnicas automotivas, ferramentas logísticas, plataformas de investimento e patrimônio, além de IA empresarial.",
+    "linksHeading": "Links:",
+    "drogasil": {
+        "title": "Drogasil (RD Saúde)",
+        "body": "Na RD Saúde liderei soluções complexas por trás de produtos como o app Drogasil: o maior ecossistema de farmácias da América Latina, onde confiabilidade, performance e uma jornada polida importam todos os dias. Atuei em arquitetura, práticas de qualidade (reviews, dojos) e entrega de features ponta a ponta.",
+        "figure": "Figura 1: captura de tela da experiência no app Drogasil.",
+        "linkDrogasil": "[Drogasil] — marca e canais",
+        "linkRd": "[RD Saúde] — site da empresa"
+    },
+    "meris": {
+        "title": "Meris (Coodex)",
+        "body": "Meris é uma plataforma de comissionamento e dados de EPC com IA para indústrias intensivas em ativos—cobrindo engenharia, compras e construção do planejamento ao handover. Usa agentes de IA verticais para automatizar etapas frágeis e sujeitas a erro em comissionamento e validação, com fluxos apoiados por LLM que mantêm projetos complexos rastreáveis, em conformidade e em movimento em produção.",
+        "iframeTitle": "Meris — visão geral do produto",
+        "figure": "Figura 2: Meris — visão geral do produto (Vimeo).",
+        "linkMeris": "[Meris] — coodex.ai/meris",
+        "linkCoodex": "[Coodex] — site da empresa"
+    },
+    "spteleva": {
+        "title": "SP T'LEVA",
+        "body": "SP T'LEVA é um app mobile para encontrar e acompanhar postos da rede SP—mostrando unidades próximas, detalhes úteis ao motorista e uma visão mais clara da rede num só fluxo. Também concentra vantagens e benefícios num único lugar para que o abastecimento fique prático, conectado e mais fácil de navegar na estrada.",
+        "figure": "Figura 3: SP T'LEVA — telas do produto.",
+        "linkSite": "[SP T'LEVA] — site oficial",
+        "linkAppStore": "[App Store] — iOS"
+    },
+    "schon": {
+        "title": "SCHON",
+        "body": "SCHON é um app de gestão para salões de beleza, barbearias e negócios do segmento—reunindo rotinas operacionais essenciais num só lugar. Facilita agendamento, organização de clientes e serviços, fluxo do dia a dia e suporte administrativo—ajudando equipes a ganharem eficiência, melhor atendimento e uma experiência moderna para equipe e cliente.",
+        "figure": "Figura 4: SCHON — telas do produto."
+    },
+    "forrageiras": {
+        "title": "Forrageiras do Ceará",
+        "body": "Forrageiras do Ceará é um app completo e intuitivo para consultores, técnicos e equipes que gerenciam e monitoram programas de produção forrageira no estado. Une interface moderna a contexto essencial—sinais climáticos locais como precipitação, temperatura e vento—além de cadastro e gestão de participantes, propriedades e dados do programa. Acompanha atividades e visitas técnicas em tempo real, com relatórios e indicadores para avaliar impacto e desempenho no campo.",
+        "figure": "Figura 5: Forrageiras do Ceará — telas do produto."
+    },
+    "simplo": {
+        "title": "Simplo",
+        "p1": "Desde 1993, a Simplo trabalha para tornar o conhecimento técnico automotivo mais aplicável—de pioneirismo em eletrônica embarcada a referência na América Latina em conteúdo técnico confiável por dezenas de milhares de profissionais de reparo. A missão é democratizar esse conhecimento: transformar informação de engenharia complexa em orientação prática para o dia a dia da oficina.",
+        "p2": "O ecossistema digital Simplo abrange web e mobile, reunindo manuais detalhados, diagramas elétricos, tabelas de diagnóstico e procedimentos de manutenção para veículos leves e pesados, híbridos, elétricos, motos e tratores—com atualizações contínuas acompanhando o mercado. Também oferece fluxos técnicos inteligentes: registro de atendimentos, histórico e notificações sobre novas versões—para que expertise vire produtividade, precisão em reparos e melhores resultados para oficinas de qualquer porte.",
+        "figureWeb": "Figura 6: Simplo — experiência web.",
+        "figureApp": "Figura 7: Simplo — experiência no app.",
+        "linkBrasil": "[Simplo Brasil] — simplusbr.com",
+        "linkOnline": "[Simplo Online] — acesso web"
+    },
+    "corpvs": {
+        "title": "Corpvs Log",
+        "body": "Corpvs Log é uma solução digital para organizar operações logísticas e dar mais visibilidade ponta a ponta—com apoio a controle de processos, acompanhamento de status e fluxo operacional padronizado. A experiência é pensada na praticidade: reduzir retrabalho, melhorar comunicação entre equipes e ganhar eficiência em transporte e distribuição.",
+        "figure": "Figura 8: Corpvs Log — telas do produto.",
+        "linkService": "[Corpvs Log] — página do serviço"
+    },
+    "carteira": {
+        "title": "Carteira de Valor",
+        "body": "Carteira de Valor é um sistema para acompanhar investimentos com mais clareza e organização. Reúne informações da carteira num só lugar, facilita o controle de aportes e da evolução do patrimônio e apoia decisões com uma experiência intuitiva e orientada a dados—focada em praticidade e visão consolidada.",
+        "figure": "Figura 9: Carteira de Valor — telas do produto."
+    }
+}

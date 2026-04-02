@@ -1,38 +1,26 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import ResumeDownload from './ResumeDownload';
 
 export interface AboutProps {}
 
 const About: React.FC<AboutProps> = () => {
+    const { t } = useTranslation();
     return (
         <div className="site-page-content">
             <h1 style={{ marginLeft: -16, lineHeight: 1.25 }}>
-                From startup code to millions-scale: my journey as a Software
-                Engineer.
+                {t('about.title')}
             </h1>
 
             <br />
             <div className="text-block">
-                <p>
-                    My path in software started in 2018 in Fortaleza, when I
-                    joined Deway as an intern. What began with Ionic and React
-                    Native at a mobile-focused startup turned into six years of
-                    steady growth, eventually leading me to Tech Lead. There I
-                    solidified my core stack—React, Next.js, Node.js, and
-                    Python—and led projects from zero to production.
-                </p>
+                <p>{t('about.p1')}</p>
+                <br />
+                <p>{t('about.p2')}</p>
                 <br />
                 <p>
-                    In 2024 I took on a role at RD Saúde (Latin America&apos;s
-                    largest drugstore retailer), where I owned complex technical
-                    solutions: shaping architecture, joining coding dojos, and
-                    driving quality through code reviews and high-level
-                    technical discussion.
-                </p>
-                <br />
-                <p>
-                    Since 2025 I&apos;ve been at Coodex, contributing to{' '}
+                    {t('about.coodexBefore')}
                     <a
                         rel="noreferrer"
                         target="_blank"
@@ -40,9 +28,7 @@ const About: React.FC<AboutProps> = () => {
                     >
                         Meris
                     </a>
-                    —prompt engineering and full-stack work with Next.js,
-                    Vue.js, NestJS, and AWS on an AI-driven commissioning
-                    platform.
+                    {t('about.coodexAfter')}
                 </p>
                 <br />
                 {/*
@@ -57,13 +43,13 @@ const About: React.FC<AboutProps> = () => {
                 <br />
                 */}
                 <p>
-                    Thanks for visiting the portfolio. Questions or
-                    opportunities? <Link to="/contact">Get in touch</Link> or
-                    email{' '}
+                    {t('about.thanksBefore')}
+                    <Link to="/contact">{t('about.thanksContact')}</Link>
+                    {t('about.thanksMiddle')}
                     <a href="mailto:techdavimoreira@gmail.com">
                         techdavimoreira@gmail.com
                     </a>
-                    .
+                    {t('about.thanksAfter')}
                 </p>
             </div>
             <ResumeDownload />
@@ -76,13 +62,13 @@ const About: React.FC<AboutProps> = () => {
                     />
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 1:</b> me on my first day as an intern.
+                            <b>{t('about.figure1')}</b>
                         </sub>
                     </p>
                 </div>
                 <br />
                 <p>
-                    Follow along on{' '}
+                    {t('about.githubFollowBefore')}
                     <a
                         rel="noreferrer"
                         target="_blank"
@@ -90,7 +76,7 @@ const About: React.FC<AboutProps> = () => {
                     >
                         GitHub (@davimoreira24)
                     </a>
-                    .
+                    {t('about.githubFollowAfter')}
                 </p>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 // @ts-ignore
 import rd from '../../../assets/pictures/projects/rd.mp4';
 // @ts-ignore
@@ -23,32 +24,34 @@ import VideoAsset from '../../general/VideoAsset';
 export interface SoftwareProjectsProps {}
 
 const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
+    const { t } = useTranslation();
+    const githubFooter = (
+        <p>
+            {t('softwarePage.moreGithubBefore')}
+            <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://github.com/davimoreira24"
+                aria-label="GitHub @davimoreira24"
+            >
+                GitHub (@davimoreira24)
+            </a>
+            {t('softwarePage.moreGithubAfter')}
+        </p>
+    );
     return (
         <div className="site-page-content">
-            <h1>Software</h1>
-            <h3>Projects</h3>
+            <h1>{t('software.title')}</h1>
+            <h3>{t('software.subtitle')}</h3>
             <br />
-            <p>
-                Highlights from recent work—mobile and web products at scale in
-                Brazilian pharmacy retail, fuel networks, beauty and barbershop
-                operations, agricultural programs, automotive technical platforms,
-                logistics tooling, investment and wealth platforms, plus
-                enterprise AI platforms.
-            </p>
+            <p>{t('software.intro')}</p>
             <br />
             <ResumeDownload />
             <br />
             <div className="text-block">
-                <h2>Drogasil (RD Saúde)</h2>
+                <h2>{t('software.drogasil.title')}</h2>
                 <br />
-                <p>
-                    At RD Saúde I owned complex solutions behind products like the
-                    Drogasil app: Latin America&apos;s largest drugstore
-                    ecosystem, where reliability, performance, and a polished
-                    customer journey matter every day. I contributed across
-                    architecture, quality practices (reviews, dojos), and
-                    shipping features end to end.
-                </p>
+                <p>{t('software.drogasil.body')}</p>
                 <br />
                 <div className="captioned-image">
                     <div style={styles.rdVideoWrap}>
@@ -56,13 +59,12 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                     </div>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 1:</b> Screen capture from the Drogasil app
-                            experience.
+                            <b>{t('software.drogasil.figure')}</b>
                         </sub>
                     </p>
                 </div>
                 <br />
-                <h3>Links:</h3>
+                <h3>{t('software.linksHeading')}</h3>
                 <ul>
                     <li>
                         <a
@@ -71,7 +73,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                             href="https://www.drogasil.com.br/"
                         >
                             <p>
-                                <b>[Drogasil]</b> — brand &amp; channels
+                                <b>{t('software.drogasil.linkDrogasil')}</b>
                             </p>
                         </a>
                     </li>
@@ -82,7 +84,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                             href="https://rdsaude.com.br/"
                         >
                             <p>
-                                <b>[RD Saúde]</b> — company site
+                                <b>{t('software.drogasil.linkRd')}</b>
                             </p>
                         </a>
                     </li>
@@ -90,22 +92,14 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
             </div>
 
             <div className="text-block">
-                <h2>Meris (Coodex)</h2>
+                <h2>{t('software.meris.title')}</h2>
                 <br />
-                <p>
-                    Meris is an AI-powered commissioning and EPC data platform for
-                    asset-intensive industries—covering engineering, procurement,
-                    and construction workflows from planning through handover. It
-                    uses vertical AI agents to automate fragile, error-prone steps
-                    in commissioning and validation, with LLM-backed flows that
-                    keep complex projects traceable, compliant, and moving in
-                    production.
-                </p>
+                <p>{t('software.meris.body')}</p>
                 <br />
                 <div className="captioned-image">
                     <div style={styles.merisVideoWrap}>
                         <iframe
-                            title="Meris — product overview"
+                            title={t('software.meris.iframeTitle')}
                             src="https://player.vimeo.com/video/1136166961?background=1"
                             style={styles.vimeoIframe}
                             allow="autoplay; fullscreen; picture-in-picture"
@@ -114,12 +108,12 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                     </div>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 2:</b> Meris — product overview (Vimeo).
+                            <b>{t('software.meris.figure')}</b>
                         </sub>
                     </p>
                 </div>
                 <br />
-                <h3>Links:</h3>
+                <h3>{t('software.linksHeading')}</h3>
                 <ul>
                     <li>
                         <a
@@ -128,7 +122,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                             href="https://coodex.ai/meris"
                         >
                             <p>
-                                <b>[Meris]</b> — coodex.ai/meris
+                                <b>{t('software.meris.linkMeris')}</b>
                             </p>
                         </a>
                     </li>
@@ -139,7 +133,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                             href="https://coodex.ai/"
                         >
                             <p>
-                                <b>[Coodex]</b> — company site
+                                <b>{t('software.meris.linkCoodex')}</b>
                             </p>
                         </a>
                     </li>
@@ -147,16 +141,9 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
             </div>
 
             <div className="text-block">
-                <h2>SP T&apos;LEVA</h2>
+                <h2>{t('software.spteleva.title')}</h2>
                 <br />
-                <p>
-                    SP T&apos;LEVA is a mobile app for finding and following SP
-                    network fuel stations—surfacing nearby units, practical
-                    driver-facing details, and a clearer picture of the network in
-                    one flow. It also pulls perks and benefits into a single hub so
-                    refueling stays practical, connected, and easier to navigate
-                    on the road.
-                </p>
+                <p>{t('software.spteleva.body')}</p>
                 <br />
                 <div className="captioned-image">
                     <div style={styles.sptelevaWrap}>
@@ -168,12 +155,12 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                     </div>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 3:</b> SP T&apos;LEVA — product screens.
+                            <b>{t('software.spteleva.figure')}</b>
                         </sub>
                     </p>
                 </div>
                 <br />
-                <h3>Links:</h3>
+                <h3>{t('software.linksHeading')}</h3>
                 <ul>
                     <li>
                         <a
@@ -182,7 +169,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                             href="https://sptleva.com.br/"
                         >
                             <p>
-                                <b>[SP T&apos;LEVA]</b> — official site
+                                <b>{t('software.spteleva.linkSite')}</b>
                             </p>
                         </a>
                     </li>
@@ -193,7 +180,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                             href="https://apps.apple.com/br/app/sp-tleva/id1626327175"
                         >
                             <p>
-                                <b>[App Store]</b> — iOS
+                                <b>{t('software.spteleva.linkAppStore')}</b>
                             </p>
                         </a>
                     </li>
@@ -201,48 +188,26 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
             </div>
 
             <div className="text-block">
-                <h2>SCHON</h2>
+                <h2>{t('software.schon.title')}</h2>
                 <br />
-                <p>
-                    SCHON is a management app for beauty salons, barbershops, and
-                    businesses in the segment—bringing essential operational
-                    routines into one place. It streamlines scheduling, client and
-                    service organization, day-to-day flow, and back-office
-                    support—helping teams run more efficiently, deliver better
-                    service, and offer a modern experience for staff and clients.
-                </p>
+                <p>{t('software.schon.body')}</p>
                 <br />
                 <div className="captioned-image">
                     <div style={styles.schonWrap}>
-                        <img
-                            src={schon}
-                            alt=""
-                            style={styles.projectImage}
-                        />
+                        <img src={schon} alt="" style={styles.projectImage} />
                     </div>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 4:</b> SCHON — product screens.
+                            <b>{t('software.schon.figure')}</b>
                         </sub>
                     </p>
                 </div>
             </div>
 
             <div className="text-block">
-                <h2>Forrageiras do Ceará</h2>
+                <h2>{t('software.forrageiras.title')}</h2>
                 <br />
-                <p>
-                    Forrageiras do Ceará is a full-featured, intuitive app for
-                    consultants, technicians, and teams involved in managing and
-                    monitoring forage production programs across the state. It
-                    pairs a modern interface with essential context—local weather
-                    signals such as precipitation, temperature, and wind—alongside
-                    registration and management of participants, properties, and
-                    program data. The product supports continuous tracking of
-                    activities and technical visits, capturing progress and results
-                    in real time, and delivers reports and performance indicators
-                    to assess impact and how field actions are performing.
-                </p>
+                <p>{t('software.forrageiras.body')}</p>
                 <br />
                 <div className="captioned-image">
                     <div style={styles.forrageirasWrap}>
@@ -254,38 +219,18 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                     </div>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 5:</b> Forrageiras do Ceará — product
-                            screens.
+                            <b>{t('software.forrageiras.figure')}</b>
                         </sub>
                     </p>
                 </div>
             </div>
 
             <div className="text-block">
-                <h2>Simplo</h2>
+                <h2>{t('software.simplo.title')}</h2>
                 <br />
-                <p>
-                    Since 1993, Simplo has worked to make automotive technical
-                    knowledge easier to apply—building on early leadership in
-                    embedded electronics and growing into a Latin American
-                    reference for technical content trusted by tens of thousands of
-                    repair professionals. The mission is to democratize that
-                    knowledge: turning complex engineering information into
-                    practical, day-to-day guidance for workshops.
-                </p>
+                <p>{t('software.simplo.p1')}</p>
                 <br />
-                <p>
-                    The Simplo digital ecosystem spans web and mobile, bringing
-                    detailed manuals, electrical diagrams, diagnostic tables, and
-                    maintenance procedures into one place for light and heavy
-                    vehicles, hybrids, electric powertrains, motorcycles, and
-                    tractors—with continuous updates that follow the market. It
-                    also supports intelligent technical workflows: logging service
-                    sessions, reviewing history, and receiving notifications about
-                    new versions and releases—so deep expertise translates into
-                    productivity, repair accuracy, and stronger results for shops
-                    of every size.
-                </p>
+                <p>{t('software.simplo.p2')}</p>
                 <br />
                 <div className="captioned-image">
                     <div style={styles.simploWrap}>
@@ -297,7 +242,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                     </div>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 6:</b> Simplo — web experience.
+                            <b>{t('software.simplo.figureWeb')}</b>
                         </sub>
                     </p>
                 </div>
@@ -312,12 +257,12 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                     </div>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 7:</b> Simplo — app experience.
+                            <b>{t('software.simplo.figureApp')}</b>
                         </sub>
                     </p>
                 </div>
                 <br />
-                <h3>Links:</h3>
+                <h3>{t('software.linksHeading')}</h3>
                 <ul>
                     <li>
                         <a
@@ -326,7 +271,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                             href="https://www.simplusbr.com/"
                         >
                             <p>
-                                <b>[Simplo Brasil]</b> — simplusbr.com
+                                <b>{t('software.simplo.linkBrasil')}</b>
                             </p>
                         </a>
                     </li>
@@ -337,7 +282,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                             href="https://www.simplusbr.com/simplo-online"
                         >
                             <p>
-                                <b>[Simplo Online]</b> — web access
+                                <b>{t('software.simplo.linkOnline')}</b>
                             </p>
                         </a>
                     </li>
@@ -345,16 +290,9 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
             </div>
 
             <div className="text-block">
-                <h2>Corpvs Log</h2>
+                <h2>{t('software.corpvs.title')}</h2>
                 <br />
-                <p>
-                    Corpvs Log is a digital solution for organizing logistics
-                    operations and making them easier to see end to end—supporting
-                    process control, status tracking, and a standardized operational
-                    flow. The experience is built around practicality: reducing
-                    rework, improving communication across teams, and driving
-                    efficiency across transport and distribution routines.
-                </p>
+                <p>{t('software.corpvs.body')}</p>
                 <br />
                 <div className="captioned-image">
                     <div style={styles.corpvsWrap}>
@@ -366,12 +304,12 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                     </div>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 8:</b> Corpvs Log — product screens.
+                            <b>{t('software.corpvs.figure')}</b>
                         </sub>
                     </p>
                 </div>
                 <br />
-                <h3>Links:</h3>
+                <h3>{t('software.linksHeading')}</h3>
                 <ul>
                     <li>
                         <a
@@ -380,7 +318,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                             href="https://www.corpvs.com.br/servicos/corpvs-log"
                         >
                             <p>
-                                <b>[Corpvs Log]</b> — service page
+                                <b>{t('software.corpvs.linkService')}</b>
                             </p>
                         </a>
                     </li>
@@ -388,16 +326,9 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
             </div>
 
             <div className="text-block">
-                <h2>Carteira de Valor</h2>
+                <h2>{t('software.carteira.title')}</h2>
                 <br />
-                <p>
-                    Carteira de Valor is a system for following investments with
-                    more clarity and structure. It brings portfolio information together
-                    in one place, streamlines tracking of contributions and how net
-                    worth evolves over time, and supports decision-making with an
-                    intuitive, data-driven experience—focused on practicality and a
-                    consolidated view of the portfolio.
-                </p>
+                <p>{t('software.carteira.body')}</p>
                 <br />
                 <div className="captioned-image">
                     <div style={styles.carteiraWrap}>
@@ -409,7 +340,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                     </div>
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 9:</b> Carteira de Valor — product screens.
+                            <b>{t('software.carteira.figure')}</b>
                         </sub>
                     </p>
                 </div>
@@ -464,19 +395,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = () => {
                 </p>
             </div>
             */}
-            <div className="text-block">
-                <p>
-                    More on{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://github.com/davimoreira24"
-                    >
-                        GitHub (@davimoreira24)
-                    </a>
-                    .
-                </p>
-            </div>
+            <div className="text-block">{githubFooter}</div>
             <ResumeDownload />
         </div>
     );
