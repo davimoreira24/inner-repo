@@ -7,6 +7,7 @@ const Experience: React.FC<ExperienceProps> = () => {
     return (
         <div className="site-page-content">
             <ResumeDownload />
+            {/*
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
                     <div style={styles.headerRow}>
@@ -52,6 +53,60 @@ const Experience: React.FC<ExperienceProps> = () => {
                     </li>
                 </ul>
             </div>
+            */}
+            <div style={styles.headerContainer}>
+                <div style={styles.header}>
+                    <div style={styles.headerRow}>
+                        <h1>Coodex</h1>
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://coodex.ai/meris"
+                        >
+                            <h4>coodex.ai — Meris</h4>
+                        </a>
+                    </div>
+                    <div style={styles.headerRow}>
+                        <h3>Software Engineer — Meris platform</h3>
+                        <b>
+                            <p>2025 – Present</p>
+                        </b>
+                    </div>
+                </div>
+            </div>
+            <div className="text-block">
+                <p>
+                    Coodex builds AI-powered platforms for asset-heavy
+                    industries; I work on{' '}
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://coodex.ai/meris"
+                    >
+                        Meris
+                    </a>
+                    , a commissioning and EPC data platform powered by vertical
+                    AI agents—shipping features end to end with a strong focus on
+                    LLM-backed workflows.
+                </p>
+                <br />
+                <ul>
+                    <li>
+                        <p>
+                            Prompt engineering and iteration on AI-assisted
+                            flows, aligning model behaviour with product and
+                            compliance needs in production.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Full-stack delivery with Next.js, Vue.js, NestJS, and
+                            AWS—APIs, UIs, and cloud plumbing for reliable
+                            releases.
+                        </p>
+                    </li>
+                </ul>
+            </div>
 
             <div style={styles.headerContainer}>
                 <div style={styles.header}>
@@ -60,7 +115,7 @@ const Experience: React.FC<ExperienceProps> = () => {
                         <a
                             rel="noreferrer"
                             target="_blank"
-                            href="https://www.rdsaude.com.br/"
+                            href="https://rdsaude.com.br/"
                         >
                             <h4>rdsaude.com.br</h4>
                         </a>

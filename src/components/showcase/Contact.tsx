@@ -145,8 +145,8 @@ const Contact: React.FC<ContactProps> = (props) => {
                 <br />
                 <p>
                     <b>Email: </b>
-                    <a href="mailto:contato@sharkmind.com.br">
-                        contato@sharkmind.com.br
+                    <a href="mailto:techdavimoreira@gmail.com">
+                        techdavimoreira@gmail.com
                     </a>
                 </p>
 

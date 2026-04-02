@@ -32,6 +32,21 @@ const About: React.FC<AboutProps> = () => {
                 </p>
                 <br />
                 <p>
+                    Since 2025 I&apos;ve been at Coodex, contributing to{' '}
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://coodex.ai/meris"
+                    >
+                        Meris
+                    </a>
+                    —prompt engineering and full-stack work with Next.js,
+                    Vue.js, NestJS, and AWS on an AI-driven commissioning
+                    platform.
+                </p>
+                <br />
+                {/*
+                <p>
                     Since 2025 I&apos;ve been a Senior Developer at Magazine
                     Luiza, focused on high-impact experiences for both web and
                     mobile. I work on the team that built a custom CRM for
@@ -40,12 +55,13 @@ const About: React.FC<AboutProps> = () => {
                     delivers real business value.
                 </p>
                 <br />
+                */}
                 <p>
                     Thanks for visiting the portfolio. Questions or
                     opportunities? <Link to="/contact">Get in touch</Link> or
                     email{' '}
-                    <a href="mailto:contato@sharkmind.com.br">
-                        contato@sharkmind.com.br
+                    <a href="mailto:techdavimoreira@gmail.com">
+                        techdavimoreira@gmail.com
                     </a>
                     .
                 </p>
